@@ -1,0 +1,28 @@
+# CONFIG NVIM
+
+Actualizar nvim:
+<leader>uu
+
+1. En "lua/core/mappings.lua" eliminar atajo "<C-s>" (line 32) y comentar 
+  atajo "<leader>q" (line 223-228)
+
+2. Crear la carpeta custom en "lua/custom"
+
+3. Dentro de custom pegar el file "init.lua" que esta en la carpeta actual (YA NO) 
+
+4. Dentro de custom pegar el file "chadrc.lua" que esta en la carpeta actual
+
+--------------------------------------------------------------------------------------
+~ (Estos files se deben comparar con los que estan en examples/ para evitar errores) ~
+--------------------------------------------------------------------------------------
+
+5. Dentro de un file teclear: <leader>th, elegir chadracula y aceptar colocar en default
+
+6. En "lua/plugins/init.lua" agregamos el plugin "["andweeb/presence.nvim"] = {}," entre los 
+  primeros y hacemos: :PackerInstall
+
+7. Dentro de "lua/plugins/configs/nvterm.lua" en la variable horizontal cambiamos 
+  el split_ratio a 0.4
+
+8. Dentro de custom en chadrc.lua colocar junto a theme: 
+  theme_toggle = { "chadracula", "onedark" },
